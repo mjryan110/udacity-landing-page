@@ -101,6 +101,7 @@ navList.addEventListener('click', function(event) {
     scrollSelection(event);
 })
 
+//w3schools helped me with this next section
 // Set sections as active
 document.addEventListener('scroll', function() {
     activeClass();
