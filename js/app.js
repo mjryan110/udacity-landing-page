@@ -62,9 +62,11 @@ function checkViewport(element) {
 
     return(
         bounding.top >= 0 &&
-        bounding.bottom <= window.innerHeight
-    )
-}
+        bounding.left >0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
 // adding active class to both the nav bar item and the section
 function activeClass() {
     for (let i = 0; i < navElements.length; i++) {
